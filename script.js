@@ -20,8 +20,6 @@ function addTodo () {
 
 }
 
-
-
 // const addBtn = document.querySelector("#addBtn");
 // const mainInput = document.querySelector("#mainInput")
 // const toDoList = document.querySelector("#toDoList")
