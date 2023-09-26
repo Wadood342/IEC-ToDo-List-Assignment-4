@@ -3,21 +3,34 @@ const mainInput = document.querySelector("#mainInput");
 const toDoList =  document.querySelector("#toDoList");
 const validator = document.querySelector("#validator");
 
-function addTodo() {
-    if(mainInput.value !==""){
-    const list = document.createElement("li")
-    list.innerHTML=  `<div class="container"><div class="row"><div class="col-8">${mainInput.value}</div><div class="col-4"><button class="btn btn-primary me-md-2" type="button">Remove</button> </div></div></div></div>`;
+function addTodo() 
+{
+    if(mainInput.value !== ""){ const list = document.createElement("li");
+    list.innerHTML= `<div class="container"><div class="row"><div class="col-8">${mainInput.value}</div><div class="col-4"><button class="btn btn-primary me-md-2" type="button">Remove</button> </div></div></div></div>`;
     toDoList.appendChild(list);
-    mainInput.value=""
+    mainInput.value= ""
     validator.textContent=""
     mainInput.classList.remove("redBorder")
-    }
+}
     else{
         mainInput.classList.add("redBorder")
-        validator.innerHTML=`<h5>Please provide a data.</h5>`;
+        validator.innerHTML= `<h5> Please Enter Some Value</h5>`
     }
-
 }
+
+
+// if(mainInput.value !==""){
+//     const list = document.createElement("li")
+//     list.innerHTML=  `<div class="container"><div class="row"><div class="col-8">${mainInput.value}</div><div class="col-4"><button class="btn btn-primary me-md-2" type="button">Remove</button> </div></div></div></div>`;
+//     toDoList.appendChild(list);
+//     mainInput.value=""
+//     validator.textContent=""
+//     mainInput.classList.remove("redBorder")
+//     }
+//     else{
+//         mainInput.classList.add("redBorder")
+//         validator.innerHTML=`<h5>Please provide a data.</h5>`;
+//     }
 
 // const mainInput = document.querySelector("#mainInput");
 // const addBtn = document.querySelector("#addBtn");
