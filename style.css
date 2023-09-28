@@ -9,3 +9,11 @@ h5{
 .redBorder{
     border: red 2px solid;
 }
+
+
+.addIcon{
+    width: 16px;
+    height: 14px;
+    font-weight: 900px;
+margin: 7px;
+}
