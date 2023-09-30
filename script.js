@@ -3,113 +3,33 @@ const mainInput = document.querySelector("#mainInput");
 const toDoList =  document.querySelector("#toDoList");
 const tableBody = document.querySelector("#tableBody");
 const validator = document.querySelector("#validator");
-let todoCount = 0;
+const clearAll = document.querySelector (".ClearAll-icon")
+let srNo = 0;
+
+
+
 function addTodo() {
-   if(mainInput.value !== ""){
-    todoCount++;
-    const tableRow = document.createElement("tr");
-    tableRow.innerHTML= `<td>${todoCount}.</td> <td>${mainInput.value}</td><td><button class="btn btn-danger mx-1 del-btn" onclick="removeRow(this)"><img src="assets/delete.svg" alt="" class=""></button> </td>` ;
-    tableBody.appendChild(tableRow);
-    mainInput.value= ""
-    validator.innerHTML= `<h2></h2>`
-    mainInput.classList.remove("redBorder")
-   }
-    else{
-        mainInput.classList.add("redBorder")
-        validator.innerHTML= `<h5> Please Enter Some Value</h5>`
+    if(mainInput.value !== ""){
+        srNo++;
+    const list = document.createElement("tr");
+    list.innerHTML= `<td>${srNo}.</td> <td>${mainInput.value}</td> <td><button class="btn btn-danger mx-1 del-btn"><img src="assets/delete.svg" alt="" class="" onclick="removeToDo(this)"></button></td>`; 
+    tableBody.appendChild(list);
+    mainInput.value="";
+    mainInput.classList.remove("redBorder");
+    validator.textContent=``
+}
+else{
+    mainInput.classList.add("redBorder");
+    validator.innerHTML= `<h5 class="validator">Please add task</h5>`;
 }
 }
-function removeRow(button){
-    const row= button.closest("tr");
+
+function removeToDo(button){
+    const row = button.closest("tr");
     row.remove();
 }
-
-
-
-
-
-// function addTodo() {
-//     if(mainInput.value !==""){
-//     const list = document.createElement("li")
-//     list.innerHTML=  `<div class="container"><div class="row"><div class="col-8">${mainInput.value}</div><div class="col-4"><button class="btn btn-primary me-md-2" type="button">Remove</button> </div></div></div></div>`;
-//     toDoList.appendChild(list);
-//     mainInput.value="";
-//     validator.textContent="";
-//     mainInput.classList.remove("redBorder");
-    
-//     }
-//     else{
-//         mainInput.classList.add("redBorder")
-//         validator.innerHTML=`<h5>Please provide a data.</h5>`;}
-    
-// }
-// const mainInput = document.querySelector("#mainInput");
-// const addBtn = document.querySelector("#addBtn");
-// const toDoList = document.querySelector("#toDoList");
-// const validator = document.querySelector("#validator")
-
-// function addTodo () {
-//     if( mainInput.value !== ""){
-//     const list = document.createElement("li")
-//     list.innerHTML = `<div class="d-grid gap-2 d-md-flex justify-content-md-end">${mainInput.value} <button class="btn btn-primary me-md-2" type="button">Button</button>  </div>`;
-//     toDoList.appendChild(list);
-// // console.log(list);
-//     mainInput.value=""
-//     validator.textContent=""
-// }
-//     else{
-//     validator.innerHTML=`<h5>Please provide a data.</h5>`
-//    }  
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-// function removeRow(button){
-//     const row = button.closest("tr");
-//     row.remove(); 
-    
-//     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const addBtn = document.querySelector("#addBtn");
-// const mainInput = document.querySelector("#mainInput")
-// const toDoList = document.querySelector("#toDoList")
-
-// function addTo(){
-//     const li = document.createElement('li');
-    
-//     li.innerHTML = `<div> <p> ${mainInput.value}<button type="button" class="btn btn-primary my-3">Remove</button> </p></div>`;
-//     toDoList.appendChild(li);
-    
-    // console.log(li)
-
-
-
-
-
-
-
-
+function clearAllTodos(){
+   
+    tableBody.innerHTML="";
+    srNo = 0;
+}
