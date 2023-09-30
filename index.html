@@ -12,27 +12,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
-<body class="bg-pic">
+<body class="bg-pic" onload="loadToDos()">
 
     <div class="container align-content-center main">
-        <h1 class="text-center align-content-center text-primary">To-Do App</h1>
-        <em><h6 class="text-center align-content-center text-primary">Organize. Prioritize. Achieve</h6></em>
+        <h1 class="text-center align-content-center ">To-Do App</h1>
+        <em><h6 class="text-center align-content-center ">Organize. Prioritize. Achieve</h6></em>
        
         <div class="container-fluid">
             <div class="row text-center align-content-center">
                 <div class="col-lg-6 col-md-6 col-sm-12 text-center offset-lg-3 offset-md-3">
-                    <input type="text" class="w-100 p-1 form-control" id="mainInput"  value="">
+                    <input type="text" class="w-100 p-1 form-control custom-input" id="mainInput"  value="">
                     <button onclick="addTodo()" type="button" class="btn btn-primary my-3" id="addBtn"> <img src="assets/add toDo.svg " class="addIcon" alt="">Add Task</button>
                     <button onclick="clearAllTodos()" type="button" class="btn btn-danger my-3" id="removeBtn"><img src="assets/clearAll.svg " class="ClearAll-Icon" alt="">Clear All</button>
                     <div id="validator">
+                    </div>
+                    <div id="clearMessage" style="display: none;">
+                        <h5 class="validator">The list is already clear.</h5>
                     </div>
                 </div>
             </div>
             <div class="row text-center align-content-center">
                 <div class="col-lg-6 col-md-6 col-sm-12 text-center offset-lg-3 offset-md-3">
-                    <table class="table table-hover" id="toDoTable">
+                    <table class="table table-hover table-dark table-striped" id="toDoTable">
                         <tbody id="tableBody">
                         </tbody>
                     </table>
