@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <div class="row text-center align-content-center">
                 <div class="col-lg-6 col-md-6 col-sm-12 text-center offset-lg-3 offset-md-3">
-                    <input type="text" class="w-100 p-1 form-control custom-input" id="mainInput"  value="">
+                    <input type="text" class="w-100 p-1 form-control custom-input" id="mainInput"  value="" placeholder="Enter Your Task">
                     <button onclick="addTodo()" type="button" class="btn btn-primary my-3" id="addBtn"> <img src="assets/add toDo.svg " class="addIcon" alt="">Add Task</button>
                     <button onclick="clearAllTodos()" type="button" class="btn btn-danger my-3" id="removeBtn"><img src="assets/clearAll.svg " class="ClearAll-Icon" alt="">Clear All</button>
                     <div id="validator">
@@ -34,13 +34,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row text-center align-content-center">
+            <div class="container-fluid">            
+                <div class="row text-center align-content-center">
                 <div class="col-lg-6 col-md-6 col-sm-12 text-center offset-lg-3 offset-md-3">
                     <table class="table table-hover table-dark table-striped" id="toDoTable">
                         <tbody id="tableBody">
                         </tbody>
                     </table>
                 </div>
+            </div>
+
             </div>
         </div>
     </div>
