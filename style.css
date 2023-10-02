@@ -46,8 +46,11 @@
 }
 td{
     font-size: large;
-    font-weight: 500;
+    font-weight: 300;
     text-transform: uppercase;
+    word-wrap: break-word;
+    max-width: 20em;
+
 }
 .edit-btn{
     background-color: green !important;
