@@ -14,6 +14,7 @@ JavaScript (script.js):
 •	addTodo(): Adds a new task to the To-Do list when the "Add Task" button is clicked. Validates and displays a message if the input is empty.
 •	removeToDo(button): Removes a task when the delete button is clicked.
 •	clearAllTodos(): Clears all tasks from the list. Displays a message if the list is already clear.
+
 •	editTask(button): 
 1.	Allows editing of tasks and validates empty tasks when in edit mode.
 2.	When the edit button is clicked, it toggles between "Edit" and "Done" modes.
