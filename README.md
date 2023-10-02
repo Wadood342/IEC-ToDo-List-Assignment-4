@@ -11,8 +11,11 @@ There are validator messages for input validation and a message for clearing all
 JavaScript (script.js):
 
 •	saveAll(): Saves the To-Do list to local storage as a JSON string.
-•	addTodo(): Adds a new task to the To-Do list when the "Add Task" button is clicked. Validates and displays a message if the input is empty.
+
+•	addTodo(): Adds a new task to the To-Do list when the "Add Task" button is clicked. Validates and displays a message if the input is empty
+
 •	removeToDo(button): Removes a task when the delete button is clicked.
+
 •	clearAllTodos(): Clears all tasks from the list. Displays a message if the list is already clear.
 
 •	editTask(button): 
