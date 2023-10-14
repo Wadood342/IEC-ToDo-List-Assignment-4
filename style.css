@@ -1,7 +1,7 @@
 
 *{
     font-family: 'Young Serif', serif;
-    color: aliceblue;
+    color: rgb(2, 112, 207);
 }
 .validator{
     color: red;
@@ -37,7 +37,7 @@
 }
 .bg-pic{
     
-    background-image:url('assets/Screenshot\ 2023-10-01\ 035933.png') ;
+    background-image:url('assets/kelly-sikkema--1_RZL8BGBM-unsplash.jpg') ;
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed; /* Optional: This will make the image stay fixed while scrolling */
